@@ -18,7 +18,7 @@
   font-size: 18px;
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .Products-item-info h2 span {
   color: #33b13a;
