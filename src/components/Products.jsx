@@ -7,7 +7,7 @@ export const Products = ({ products }) => {
   return (
     <div className="Products">
       <section className="Products-items">
-        {products.map((product) => {
+        {products.map(product => {
           return <Product key={product.id} product={product} />;
         })}
       </section>
