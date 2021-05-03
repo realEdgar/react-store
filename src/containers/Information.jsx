@@ -3,5 +3,39 @@ import React from 'react';
 import '../styles/components/Information.css';
 
 export const Information = () => {
-  return <h1>Information Page</h1>;
+  return (
+    <section className="Information">
+      <div className="Information-content">
+        <div className="Information-head">
+          <h2>Contact Information</h2>
+        </div>
+        <div className="Information-form">
+          <form action="">
+            <input type="text" placeholder="Name"  name="name" />
+            <input type="text" placeholder="Email"  name="email" />
+            <input type="text" placeholder="Address"  name="address" />
+            <input type="text" placeholder="Apto"  name="apto" />
+            <input type="text" placeholder="City"  name="city" />
+            <input type="text" placeholder="Country"  name="country" />
+            <input type="text" placeholder="State"  name="state" />
+            <input type="text" placeholder="Postal Code"  name="cp" />
+            <input type="text" placeholder="Phone Number"  name="phone" />
+          </form>
+        </div>
+        <div className="Information-buttons">
+          <button className="Information-back">Back</button>
+          <button className="Information-next">Pay</button>
+        </div>
+        <div className="Information-sidebar">
+          <h3>Carry:</h3>
+          <div className="Information-item">
+            <div className="Information-element">
+              <h4>Item Name</h4>
+              <span>$10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
