@@ -13,16 +13,16 @@ export const Checkout = () => {
             <h4>Item Name:</h4>
             <span>$10</span>
           </div>
-          <button type="button" >
+          <button type="button">
             <i className="fas fa-trash-alt" />
           </button>
         </div>
       </div>
       <div className="Checkout-sidebar">
         <h3>Precio total: $10</h3>
-        <Link to="/checkout/information" >
-          <button type="button">Continue Pedido</button>
-        </Link>        
+        <Link to="/checkout/information">
+          <button type="button">Continue Buying</button>
+        </Link>
       </div>
     </div>
   );
