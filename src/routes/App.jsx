@@ -30,7 +30,7 @@ const App = () => {
           </Switch>
         </Layout>
       </BrowserRouter>
-    </AppContext.Provider>    
+    </AppContext.Provider> 
   );
 };
 
