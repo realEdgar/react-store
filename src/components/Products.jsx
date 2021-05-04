@@ -9,15 +9,21 @@ export const Products = () => {
   const { state, addToCart } = useContext(AppContext);
   const { products } = state;
 
-  const handleAddToCart = product => () => {
-    addToCart( product );
-  }
+  const handleAddToCart = (product) => () => {
+    addToCart(product);
+  };
 
   return (
     <div className="Products">
       <section className="Products-items">
         {products.map((product) => {
-          return <Product key={product.id} product={product} handleAddToCart={ handleAddToCart } />;
+          return (
+            <Product
+              key={product.id}
+              product={product}
+              handleAddToCart={handleAddToCart}
+            />
+          );
         })}
       </section>
     </div>
