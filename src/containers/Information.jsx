@@ -55,20 +55,20 @@ export const Information = () => {
           <div className="Information-next">
             <button type="button" onClick={handleSubmit}>Pay</button>
           </div>
-        </div>
-        <div className="Information-sidebar">
-          <h3>Carry:</h3>
-          {cart.map(item => {
-            return (
-              <div className="Information-item" key={item.id}>
-                <div className="Information-element">
-                  <h4>{item.title}</h4>
-                  <span>${item.price}</span>
-                </div>
+        </div>        
+      </div>
+      <div className="Information-sidebar">
+        <h3>Carry:</h3>
+        {cart.map(item => {
+          return (
+            <div className="Information-item" key={item.id}>
+              <div className="Information-element">
+                <h4>{item.title}</h4>
+                <span>${item.price}</span>
               </div>
-            );
-          })}          
-        </div>
+            </div>
+          );
+        })}          
       </div>
     </section>
   );
