@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import AppContext from '../context/AppContext'
+import AppContext from '../context/AppContext';
 
 import '../styles/components/Checkout.css';
 
@@ -26,7 +26,7 @@ export const Checkout = () => {
         {cart.length > 0 ? <h3>List:</h3> : <h3>Empty List</h3>}
         {cart.map((item) => {
           return (
-            <div className="Checkout-item">
+            <div className="Checkout-item" key={item.id} >
               <div className="Checkout-element">
                 <h4>{item.title}</h4>
                 <span>${item.price}</span>

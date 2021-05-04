@@ -1,5 +1,5 @@
 import React, { useRef, useContext} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import AppContext from '../context/AppContext';
 
@@ -8,11 +8,11 @@ import '../styles/components/Information.css';
 export const Information = () => {
   const {state,addToBuyer} = useContext(AppContext);
   const form = useRef(null);
+  const history = useHistory();
   const { cart } = state;
 
   function handleSubmit() {
     const information = new FormData(form.current);
-    console.log(form.current);
     const buyer = {
       "name": information.get('name'),
       "email": information.get('email'),
@@ -24,9 +24,9 @@ export const Information = () => {
       "cp": information.get('cp'),
       "phone": information.get('phone'),
     };
-
+    console.log(buyer);
     addToBuyer(buyer);
-    
+    history.push('/checkout/payment');
   }
 
   return (
